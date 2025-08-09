@@ -49,7 +49,7 @@ RudderStack/
 ├── wdio.conf.js
 └── README.md
 
-##CI Integration
+## CI Integration
 
 Continuous Integration:
 GitHub Actions is configured to run the automation tests on every push to the repository. The workflows are defined in the .github/workflows/ directory.
