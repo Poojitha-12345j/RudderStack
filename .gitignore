@@ -35,6 +35,3 @@ test-results/
 
 # Lock files (optional: you might want to commit package-lock.json)
 # package-lock.json
-
-# Ignore local config files if any (like local environment overrides)
-.local.env
