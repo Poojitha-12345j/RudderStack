@@ -1,26 +1,26 @@
 name: RudderStack UI Test Runner (Daily)
 
 on:
-    schedule:
-        # Runs at 2:00 AM UTC every day
-        - cron: "0 2 * * *"
-    workflow_dispatch:
+  schedule:
+    # Runs at 2:00 AM UTC every day
+    - cron: "0 2 * * *"
+  workflow_dispatch:
 
 jobs:
-    run-tests:
-        runs-on: ubuntu-latest
+  run-tests:
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v3
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v3
-              with:
-                  node-version: "16"
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
 
-            - name: Install dependencies
-              run: npm install
+      - name: Install dependencies
+        run: npm install
 
-            - name: Run WebdriverIO tests
-              run: npx wdio run wdio.conf.js
+      - name: Run WebdriverIO tests
+        run: npx wdio run wdio.conf.js
