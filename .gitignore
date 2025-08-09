@@ -1,9 +1,6 @@
 # Node modules
 node_modules/
 
-# Environment config files (contains secrets)
-.env
-
 # Logs
 logs/
 *.log
