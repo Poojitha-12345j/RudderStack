@@ -11,20 +11,25 @@ This repository contains automation tests for the RudderStack website using Webd
 2. Install dependencies:
    npm install
 
+## How to Run
+
 Run the tests using WebdriverIO based On Environment:
    For Dev - npm run test:dev
    For Qa - npm run test:qa
    For Prod - npm run test:prod
 
-Technologies Used 
+## Technologies Used
+
+Technologies:
 WebdriverIO: (WDIO): A custom automation framework for browser and mobile testing.
 CucumberJS: A tool for running automated tests written in plain language.
 Axios: A promise-based HTTP client for making API calls from the browser or Node.js
 JavaScript: Programming language used for writing the test scripts.
 Gherkin: A language for writing Cucumber tests in a human-readable format 
 
-Project Structure
+## Project Structure
 
+Project Structure:
 RudderStack/
 ├── .github/
 │   └── workflows/
@@ -44,7 +49,9 @@ RudderStack/
 ├── wdio.conf.js
 └── README.md
 
-Continuous Integration
+##CI Integration
+
+Continuous Integration:
 GitHub Actions is configured to run the automation tests on every push to the repository. The workflows are defined in the .github/workflows/ directory.
 
 
