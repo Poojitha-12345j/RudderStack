@@ -50,6 +50,14 @@ exports.config = {
     capabilities: [
         {
             browserName: "chrome",
+            "goog:chromeOptions": {
+                args: [
+                    "--no-sandbox",
+                    "--disable-dev-shm-usage",
+                    "--headless", // remove this if you want to see the browser UI
+                    `--user-data-dir=/tmp/unique-profile-${Date.now()}`, // unique user data directory
+                ],
+            },
         },
     ],
 
