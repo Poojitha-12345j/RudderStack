@@ -1,6 +1,7 @@
 const { BaseActions } = require("./base.page.js");
 const { ConnectionsLocators } = require("../locators/connections.locators.js");
-const destinations = require("../testdata/destinations.json");
+const path = require("path");
+const destinations = require(path.resolve(__dirname, "../testdata/destinations.json"));
 
 class ConnectionsPage extends BaseActions {
     /**
