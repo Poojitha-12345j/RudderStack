@@ -1,6 +1,6 @@
 const { When } = require("@cucumber/cucumber");
-const ConnectionsPage = require("../../../src/web/pages/ConnectionsPage");
-const { runTimeData } = require("../../test-data");
+const ConnectionsPage = require("../../pages/connections.page.js");
+const { runTimeData } = require("../../utils/runTimeData.js");
 
 When(/^the user retrieves the data plane URL and write key$/, async () => {
     runTimeData.dataPlaneUrl = await ConnectionsPage.getDataPlaneUrl();

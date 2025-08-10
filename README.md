@@ -1,58 +1,73 @@
-```sh
 # RudderStack Automation Tests
 
-This repository contains automation tests for the RudderStack website using WebdriverIO and CucumberJS.
+This repository contains UI and API automation test for the **RudderStack** platform using **WebdriverIO** and **CucumberJS** with an integrated API testing layer.
 
 ## Setup
 
-1. Clone the repo:
-   git clone https://github.com/Poojitha-12345j/RudderStack.git
-   cd RudderStack
-2. Install dependencies:
-   npm install
+### Clone the Project
 
-## How to Run
+```sh
+git clone https://github.com/Poojitha-12345j/RudderStack.git
+cd RudderStack
+```
 
-Run the tests using WebdriverIO based On Environment:
-   For Dev - npm run test:dev
-   For Qa - npm run test:qa
-   For Prod - npm run test:prod
+### Install dependencies
+
+```sh
+npm install
+```
+
+## Running Tests
+
+Run WebdriverIO tests for a specific environment:
+
+```sh
+# For Dev
+npm run test:dev
+
+# For QA
+npm run test:qa
+
+# For Prod
+npm run test:prod
+
+```
 
 ## Technologies Used
 
-Technologies:
-WebdriverIO: (WDIO): A custom automation framework for browser and mobile testing.
-CucumberJS: A tool for running automated tests written in plain language.
-Axios: A promise-based HTTP client for making API calls from the browser or Node.js
-JavaScript: Programming language used for writing the test scripts.
-Gherkin: A language for writing Cucumber tests in a human-readable format 
+```sh
+WebdriverIO(WDIO) : Browser and mobile automation framework.
+CucumberJS : BDD framework for writing human-readable tests.
+Axios : HTTP client for API testing and backend validation.
+JavaScript : Programming language for automation scripts.
+Gherkin : Plain language format for writing Cucumber scenarios.
+AllureReports : Rich test reporting with screenshots.
+```
 
 ## Project Structure
 
-Project Structure:
+```sh
 RudderStack/
-├── .github/
-│   └── workflows/
-├── src/
-│   └── api/
-│   └── web/
-├── test/
-│   └── features/
-│       └── example.feature
-│   └──step-definitions/
-│   └──test-data/
-├── utils/
-├── .env
-├── .gitignore
-├── package.json
-├── package-lock.json
-├── wdio.conf.js
+├── .github/workflows/        # CI/CD workflows (GitHub Actions)
+├── api/                      # API testing layer
+│   ├── clients/               # Axios client setup
+│   ├── constants/             # API endpoints & test data
+│   ├── requests/              # API request builders
+│   └── services/              # API service methods
+├── features/                 # Gherkin feature files
+├── locators/                 # UI element locators per page
+├── pages/                    # Page Object Model classes
+├── reports/                  # Allure and other reports
+├── steps/                    # Step definitions (API & Web)
+├── testData/                 # Static JSON test data
+├── utils/                    # Utilities (env loader, runtime store)
+├── .env                      # Environment variables
+├── wdio.conf.js              # WDIO configuration
 └── README.md
+
+```
 
 ## CI Integration
 
-Continuous Integration:
-GitHub Actions is configured to run the automation tests on every push to the repository. The workflows are defined in the .github/workflows/ directory.
-
-
-```
+- GitHub Actions is configured to run tests automatically.
+- Workflows are defined in .github/workflows/.

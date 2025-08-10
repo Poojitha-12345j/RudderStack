@@ -1,4 +1,4 @@
-import { APIEndPoints } from "../constants/apiEndPoint";
+import { APIEndPoints } from "../constants/apiEndpoints";
 
 export class TrackEventRequests {
     static async sendTrackEventRequest(client, userId, eventName, properties) {

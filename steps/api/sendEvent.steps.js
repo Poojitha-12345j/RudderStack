@@ -1,6 +1,6 @@
 const { When, Then } = require("@cucumber/cucumber");
-const { runTimeData } = require("../../test-data");
-import { sendTestEvent } from "../../../src/api/services/event.service.js";
+const { runTimeData } = require("../../utils/runTimeData.js");
+import { sendTestEvent } from "../../api/services/event.service.js";
 
 let apiResponse; // store for use in the next step
 

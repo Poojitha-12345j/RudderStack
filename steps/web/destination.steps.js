@@ -1,6 +1,6 @@
 const { When, Then } = require("@cucumber/cucumber");
-const DestinationPage = require("../../../src/web/pages/DestinationPage");
-const { runTimeData } = require("../../test-data");
+const DestinationPage = require("../../pages/destination.page.js");
+const { runTimeData } = require("../../utils/runTimeData.js");
 
 When("the user views the Events tab", async () => {
     await DestinationPage.goToEventsTab();
